@@ -2,8 +2,8 @@ TARGET		=	$(BIN_DIR)/printf.a
 COMPILER	=	gcc
 CFLAGS 		=	-Werror -Wextra -Wall -g
 
-BUILD_DIR 	=	../../../build/ft_printf
-BIN_DIR		=	../../../build/bin
+BUILD_DIR 	=	../../../../build/ft_printf
+BIN_DIR		=	../../../../build/bin
 SRC_DIR		=	.
 
 RED			=	\033[31m
