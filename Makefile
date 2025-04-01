@@ -33,7 +33,7 @@ OBJS = $(patsubst %.c, $(BUILD_DIR)/%.o, $(LIBC))
 
 all: $(TARGET)
 	@$(MAKE) -C $(SRC_DIR)/ft_printf/ --no-print-directory
-	@echo "$(GRN)\n\nInfo : Compilation de la libft réussie !\n$(CRESET)"
+	@echo "$(GRN)Info : Compilation de la libft réussie !\n$(CRESET)"
 
 stealth: all clean
 
