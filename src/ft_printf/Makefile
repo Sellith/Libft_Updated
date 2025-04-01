@@ -7,7 +7,7 @@ BIN_DIR		=	../../../../build/bin
 SRC_DIR		=	.
 
 RED			=	\033[31m
-GRN			=	\033[32m
+GRN			=	\033[92m
 YLW			=	\033[33m
 CRESET		=	\033[0m
 
@@ -18,9 +18,7 @@ SRC			=	ft_printf_putchar.c ft_printf_puthexa.c ft_printf_putnumber.c ft_printf_
 OBJS		=	$(patsubst %.c, $(BUILD_DIR)/%.o, $(SRC))
 
 all: $(TARGET)
-	@echo "-------------------------------------------------- \
- 	$(GRN)\n\nInfo : Compilation de ft_printf réussie !\n\n$(CRESET)\
-	--------------------------------------------------\n"
+	@echo "$(GRN)\n\nInfo : Compilation de ft_printf réussie !$(CRESET)\n"
 
 $(TARGET): $(OBJS)
 	@mkdir -p  $(BIN_DIR)

@@ -8,7 +8,7 @@ GNL_DIR		=	get_next_line
 SRC_DIR		=	src
 
 RED			=	\033[31m
-GRN			=	\033[32m
+GRN			=	\033[92m
 YLW			=	\033[33m
 CRESET		=	\033[0m
 
@@ -33,9 +33,7 @@ OBJS = $(patsubst %.c, $(BUILD_DIR)/%.o, $(LIBC))
 
 all: $(TARGET)
 	@$(MAKE) -C $(SRC_DIR)/ft_printf/ --no-print-directory
-	@echo "-------------------------------------------------- \
- 	$(GRN)\n\nInfo : Compilation de la libft réussie !\n\n$(CRESET)\
-	--------------------------------------------------\n"
+	@echo "$(GRN)\n\nInfo : Compilation de la libft réussie !\n$(CRESET)"
 
 stealth: all clean
 
