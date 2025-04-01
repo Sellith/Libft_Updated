@@ -3,7 +3,7 @@ COMPILER	=	gcc
 CFLAGS 		=	-Werror -Wextra -Wall -g
 
 BUILD_DIR 	=	../../../../build/ft_printf
-BIN_DIR		=	../../../../build/bin
+BIN_DIR		=	../../../../bin/archives
 SRC_DIR		=	.
 
 RED			=	\033[31m
