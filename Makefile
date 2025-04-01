@@ -2,8 +2,8 @@ TARGET		=	$(BIN_DIR)/libft.a
 COMPILER	=	gcc
 CFLAGS 		=	-Werror -Wextra -Wall -g
 
-BUILD_DIR 	=	../build/libft
-BIN_DIR		=	../build/bin
+BUILD_DIR 	=	../../build/libft
+BIN_DIR		=	../../build/bin
 GNL_DIR		=	get_next_line
 SRC_DIR		=	src
 
@@ -39,7 +39,7 @@ all: $(TARGET)
 
 stealth: all clean
 
-$(TARGET): $(OBJS)
+$(TARGET):  $(LIBFT_TARGET) $(OBJS)
 	@mkdir -p $(BIN_DIR)
 	@ar rcs $(TARGET) $(OBJS)
 
@@ -60,5 +60,6 @@ stealth_re: fclean all
 
 re: fclean all
 
-
 .PHONY: stealth all clean fclean stealth_re re
+
+
