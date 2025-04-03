@@ -32,12 +32,12 @@ LIBC		=	ft_isalpha.c ft_isprint.c ft_strlen.c ft_bzero.c \
 OBJS = $(patsubst %.c, $(BUILD_DIR)/%.o, $(LIBC))
 
 all: $(TARGET)
-	@$(MAKE) -C $(SRC_DIR)/ft_printf/ --no-print-directory
-	@printf "$(GRN)Info : Compilation de la libft réussie !\n$(CRESET)"
 
 stealth: all clean
 
 $(TARGET):  $(LIBFT_TARGET) $(OBJS)
+	@$(MAKE) -C $(SRC_DIR)/ft_printf/ --no-print-directory
+	@printf "$(GRN)Info : Compilation de la libft réussie !\n$(CRESET)"
 	@mkdir -p $(BIN_DIR)
 	@ar rcs $(TARGET) $(OBJS)
 

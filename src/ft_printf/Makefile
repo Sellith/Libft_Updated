@@ -18,11 +18,11 @@ SRC			=	ft_printf_putchar.c ft_printf_puthexa.c ft_printf_putnumber.c ft_printf_
 OBJS		=	$(patsubst %.c, $(BUILD_DIR)/%.o, $(SRC))
 
 all: $(TARGET)
-	@printf "$(GRN)Info : Compilation de ft_printf réussie !$(CRESET)\n"
 
 $(TARGET): $(OBJS)
 	@mkdir -p  $(BIN_DIR)
 	@ar rcs $(TARGET) $(OBJS)
+	@printf "$(GRN)Info : Compilation de ft_printf réussie !$(CRESET)\n"
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(BUILD_DIR)
