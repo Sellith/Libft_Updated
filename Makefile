@@ -2,8 +2,8 @@ TARGET		=	$(BIN_DIR)/libft.a
 COMPILER	=	gcc
 CFLAGS 		=	-Werror -Wextra -Wall -g
 
-BUILD_DIR 	=	../../build/libft
-BIN_DIR		=	../../bin/archives
+BUILD_DIR 	=	../build/libft
+BIN_DIR		=	../bin/archives
 GNL_DIR		=	get_next_line
 SRC_DIR		=	src
 
