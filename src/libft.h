@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/01 14:36:06 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/07 23:43:09 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,8 @@ void	ft_putdarray(char **darray);
 void	ft_putlarray(long *larray, int args);
 int		*ft_datoia(char	**darray, int args);
 char	*ft_strstr(const char *sent, const char *target);
-int		darraylen(char **array);
+int		ft_darraylen(char **array);
 char	*ft_strcat(char *dst, char *src);
+void	ft_freedarray(char **darray);
 
 #endif

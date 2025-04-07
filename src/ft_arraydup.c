@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arraydup.c                                      :+:      :+:    :+:   */
+/*   ft_darraydup.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 00:42:36 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/03/31 16:56:07 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/07 23:44:14 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_arraydup(char **array)
+char	**ft_arraydup(char **darray)
 {
 	int		i;
 	int		len;
 	char	**buffer;
 
-	if (array == NULL)
+	if (darray == NULL)
 		return (NULL);
-	len = darraylen(array);
+	len = ft_darraylen(darray);
 	buffer = ft_calloc(len + 1, sizeof(char *));
 	if (buffer == NULL)
 		return (NULL);
 	i = 0;
-	while (array[i] != NULL)
+	while (darray[i] != NULL)
 	{
-		buffer[i] = ft_strdup(array[i]);
+		buffer[i] = ft_strdup(darray[i]);
 		i++;
 	}
-	buffer[len] = NULL;
+	buffer[i] = NULL;
 	return (buffer);
 }
 
@@ -40,7 +40,7 @@ char	**ft_arraydup(char **array)
 // 	int		i;
 
 // 	i = 0;
-// 	buffer = ft_arraydup(argv, argc + 1);
+// 	buffer = ft_darraydup(argv, argc + 1);
 // 	if (buffer == NULL)
 // 	{
 // 		ft_putstr_fd("(NULL)", 1);
