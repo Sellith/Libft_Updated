@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char **ft_addtoda(char **darray, char *str)
+char	**ft_addtoda(char **darray, char *str)
 {
 	int		alen;
 	int		i;
