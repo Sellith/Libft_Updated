@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 23:25:15 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/07 23:57:13 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/08 18:56:14 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@ char	**ft_addtoda(char **darray, char *str)
 	alen = ft_darraylen(darray);
 	buffer = malloc(sizeof(char *) * alen + 2);
 	i = 0;
+	if (!darray)
+	{
+		buffer[0] = ft_strdup(str);
+		buffer[1] = NULL;
+		return (buffer);
+	}
 	while (darray[i])
 	{
 		buffer[i] = ft_strdup(darray[i]);
