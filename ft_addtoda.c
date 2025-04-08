@@ -32,18 +32,3 @@ char **ft_addtoda(char **darray, char *str)
 		ft_freedarray(darray);
 	return (buffer);
 }
-
-int main(int argc, char **argv)
-{
-	char	**buffer;
-	char	**tmp;
-	int		i;
-
-	(void)argc;
-	tmp = ft_arraydup(argv);
-	buffer = ft_addtoda(tmp, tmp[3]);
-	i = 0;
-	while (buffer[i])
-		printf("%s\n", buffer[i++]);
-	return (0);
-}
