@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/07 23:43:09 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/08 17:29:49 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,6 @@ char	*ft_strstr(const char *sent, const char *target);
 int		ft_darraylen(char **array);
 char	*ft_strcat(char *dst, char *src);
 void	ft_freedarray(char **darray);
+char	**ft_addtoda(char **darray, char *str);
 
 #endif
