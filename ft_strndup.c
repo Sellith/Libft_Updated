@@ -6,13 +6,13 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 19:29:53 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/17 19:38:27 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/17 19:48:10 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(char *sent, size_t size)
+char	*ft_strndup(char *sent, int size)
 {
 	char	*buffer;
 	int		len;
