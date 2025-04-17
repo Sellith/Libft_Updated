@@ -33,8 +33,8 @@ LIBC		=	ft_isalpha.c ft_isprint.c ft_strlen.c ft_bzero.c				\
 				get_next_line_utils.c ft_printf_putchar.c ft_printf_puthexa.c	\
 				ft_printf_putnumber.c ft_printf_putpointer.c					\
 				ft_printf_putstring.c ft_printf_putunsigned.c ft_printf.c		\
-				ft_printf_puterror.c ft_printf_putdarray.c ft_addtoda.c				\
-				ft_freedarray.c
+				ft_printf_puterror.c ft_printf_putdarray.c ft_addtoda.c			\
+				ft_freedarray.c ft_strncmpcat.c
 
 
 
