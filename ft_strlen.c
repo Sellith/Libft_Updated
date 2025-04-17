@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvan-bre <lvan-bre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:02:43 by lvan-bre          #+#    #+#             */
-/*   Updated: 2024/10/19 01:04:33 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/17 16:55:19 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s && s[i] != '\0')
 		i++;
 	return (i);
 }
