@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 19:13:24 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/17 19:50:28 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/17 20:45:42 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_strncmpcat(const char *s1, const char *s2, char *joined, size_t n)
 	if (!s1 || !s2 || !joined)
 		return (-1);
 	buffer = ft_strjoin(s1, joined);
-	while ((s1[i] || s2[i]) && i < n)
+	while ((buffer[i] || s2[i]) && i < n)
 	{
-		if (s1[i] != s2[i])
-			return ((const unsigned char)s1[i] - (const unsigned char)s2[i]);
+		if (buffer[i] != s2[i])
+			return ((const unsigned char)buffer[i] - (const unsigned char)s2[i]);
 		i++;
 	}
 	free(buffer);
