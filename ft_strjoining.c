@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 19:16:17 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/15 23:00:17 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/17 19:07:37 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,15 @@ char	*ft_strjoining(char *s1, char const *s2)
 {
 	char	*buffer;
 
-	if (s1 == NULL)
+	if (!s1 && s2)
+		return (ft_strdup(s2));
+	if (s1 && !s2)
+	{
+		buffer = ft_strdup(s1);
+		return (free(s1), buffer);
+	}
+	if (!s1 && !s2)
 		return (NULL);
-	if (s2 == NULL)
-		return (s1);
 	buffer = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (buffer == 0)
 		return (NULL);
