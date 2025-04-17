@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 19:29:53 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/17 19:48:10 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/17 19:55:00 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ char	*ft_strndup(char *sent, int size)
 		len = size;
 	buffer = malloc(sizeof(char) * (len + 1));
 	while (i < len)
+	{
 		buffer[i] = sent[i];
+		i++;
+	}
 	return (buffer);
 }
