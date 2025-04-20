@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 02:52:25 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/20 03:03:06 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/20 03:05:13 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 char	*ft_str_replace(char *sent, int replaced)
 {
 	char	*buffer;
+	char	*tmp;
 
-	buffer = ft_strdup(sent);
+	tmp = sent + replaced;
+	buffer = ft_strdup(tmp);
 	if (sent)
 		free(sent);
 	return (buffer);
