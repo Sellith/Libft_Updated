@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/24 22:55:48 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/24 22:58:36 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 
 # include "get_next_line.h"
 # include "ft_printf.h"
+
+# define ERR_MALLOC "\033[1;91mError: Malloc error\n\033[0m"
 
 typedef struct s_list
 {
