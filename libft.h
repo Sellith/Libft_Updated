@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/20 03:03:21 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/24 22:55:48 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdarg.h>
 
 # include "get_next_line.h"
+# include "ft_printf.h"
 
 typedef struct s_list
 {
