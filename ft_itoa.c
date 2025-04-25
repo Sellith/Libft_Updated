@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvan-bre <lvan-bre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 00:01:13 by lvan-bre          #+#    #+#             */
-/*   Updated: 2024/10/30 02:38:41 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:57:26 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft_numblen(long int enby)
 		enby *= -1;
 	}
 	else if (enby == 0)
-		len++;
+		return (1);
 	while (enby > 0)
 	{
 		len++;
@@ -42,8 +42,8 @@ char	*ft_itoa(int n)
 
 	enby = (long int)n;
 	i = ft_numblen(enby);
-	buffer = malloc((i + 1) * sizeof(char));
-	if (buffer == NULL)
+	buffer = ft_calloc((i + 1), sizeof(char));
+	if (!buffer)
 		return (NULL);
 	buffer[i--] = '\0';
 	if (enby < 0)

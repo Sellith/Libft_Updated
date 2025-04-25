@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 00:38:02 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/03/30 20:22:00 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:53:06 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	buffer = malloc((ft_countword(s, c) + 1) * sizeof(char *));
-	if (buffer == NULL)
+	buffer = ft_calloc((ft_countword(s, c) + 1), sizeof(char *));
+	if (!buffer)
 		return (NULL);
 	wcount = ft_split_exec(s, c, buffer);
 	if (wcount == -1)

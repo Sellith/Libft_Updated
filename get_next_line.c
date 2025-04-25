@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 19:27:44 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/03/24 16:51:16 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:49:11 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	read_n_stash(int fd, t_gnl **stash)
 	red_ptr = 1;
 	while (!found_new_line(*stash))
 	{
-		buffer = malloc(BUFFER_SIZE * sizeof(char) + 1);
-		if (buffer == NULL)
+		buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+		if (!buffer)
 			return ;
 		red_ptr = (int)read(fd, buffer, BUFFER_SIZE);
 		if (red_ptr <= 0)
@@ -45,18 +45,18 @@ void	add_to_stash(t_gnl **stash, char *buffer, int red)
 	t_gnl	*current;
 	t_gnl	*new;
 
-	new = malloc(sizeof(t_gnl));
-	if (new == NULL)
+	new = ft_calloc(1, sizeof(t_gnl));
+	if (!new)
 		return ;
 	new->next = NULL;
-	new->content = malloc((red + 1) * sizeof(char));
-	if (new->content == NULL)
+	new->ctn = ft_calloc((red + 1), sizeof(char));
+	if (!new->ctn)
 		return (free(new));
 	i = -1;
-	while (buffer[++i] != '\0' && i < red)
-		new->content[i] = buffer[i];
-	new->content[i] = '\0';
-	if (*stash == NULL)
+	while (buffer[++i] && i < red)
+		new->ctn[i] = buffer[i];
+	new->ctn[i] = '\0';
+	if (!*stash)
 	{
 		*stash = new;
 		return ;
@@ -70,23 +70,23 @@ void	extract_line(t_gnl *stash, char **line)
 	int	i;
 	int	j;
 
-	if (stash == NULL)
+	if (!stash)
 		return ;
 	ft_count_n_malloc(stash, line);
-	if (*line == NULL)
+	if (!*line)
 		return (free_stash(stash));
 	j = 0;
-	while (stash != NULL)
+	while (stash)
 	{
 		i = 0;
-		while (stash->content[i] != '\0')
+		while (stash->ctn[i])
 		{
-			if (stash->content[i] == '\n')
+			if (stash->ctn[i] == '\n')
 			{
-				(*line)[j++] = stash->content[i];
+				(*line)[j++] = stash->ctn[i];
 				break ;
 			}
-			(*line)[j++] = stash->content[i++];
+			(*line)[j++] = stash->ctn[i++];
 		}
 		stash = stash->next;
 	}
@@ -100,23 +100,23 @@ void	clean_stash(t_gnl **stash)
 	int		i;
 	int		j;
 
-	stash_nl = malloc(sizeof(t_gnl));
-	if (stash_nl == NULL || stash == NULL)
+	stash_nl = ft_calloc(1, sizeof(t_gnl));
+	if (!stash_nl || !stash)
 		return ;
 	stash_nl->next = NULL;
 	last = gnl_lstlast(*stash);
 	i = 0;
-	while (last->content[i] != '\0' && last->content[i] != '\n')
+	while (last->ctn[i] && last->ctn[i] != '\n')
 		i++;
-	if (last->content[i] != '\0' && last->content[i] == '\n')
+	if (last->ctn[i] && last->ctn[i] == '\n')
 		i++;
-	stash_nl->content = malloc(sizeof(char) * ft_strlen(last->content) - i + 1);
-	if (stash_nl->content == NULL)
+	stash_nl->ctn = ft_calloc(sizeof(char), ft_strlen(last->ctn) - i + 1);
+	if (!stash_nl->ctn)
 		return ;
 	j = 0;
-	while (last->content[i] != '\0')
-		stash_nl->content[j++] = last->content[i++];
-	stash_nl->content[j] = '\0';
+	while (last->ctn[i])
+		stash_nl->ctn[j++] = last->ctn[i++];
+	stash_nl->ctn[j] = '\0';
 	free_stash(*stash);
 	*stash = stash_nl;
 }
@@ -129,11 +129,11 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (free_stash(stash), NULL);
 	read_n_stash(fd, &stash);
-	if (stash == NULL)
+	if (!stash)
 		return (NULL);
 	extract_line(stash, &line);
 	clean_stash(&stash);
-	if (line[0] == '\0')
+	if (!line[0])
 	{
 		free_stash(stash);
 		stash = NULL;

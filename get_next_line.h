@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 19:28:58 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/01 14:36:37 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:26:31 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 typedef struct s_gnl
 {
-	char			*content;
+	char			*ctn;
 	struct s_gnl	*next;
 }					t_gnl;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvan-bre <lvan-bre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:43:23 by lvan-bre          #+#    #+#             */
-/*   Updated: 2024/10/24 23:48:50 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:51:47 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	if (len <= ft_strlen(s) - start)
-		buffer = malloc(len++ + 1);
+		buffer = ft_calloc(len++ + 1, sizeof(char));
 	else
 	{
-		buffer = malloc(ft_strlen(s) - start + 1);
+		buffer = ft_calloc(ft_strlen(s) - start + 1, sizeof(char));
 		len = (ft_strlen(s) - start + 1);
 	}
-	if (buffer == NULL)
+	if (!buffer)
 		return (NULL);
 	ft_strlcpy(buffer, (s + start), len);
 	return (buffer);

@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 22:30:31 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/03/24 13:42:50 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/25 01:26:26 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	found_new_line(t_gnl *stash)
 		return (0);
 	current = gnl_lstlast(stash);
 	i = 0;
-	while (current->content[i])
+	while (current->ctn[i])
 	{
-		if (current->content[i] == '\n')
+		if (current->ctn[i] == '\n')
 			return (1);
 		i++;
 	}
@@ -50,9 +50,9 @@ void	ft_count_n_malloc(t_gnl *stash, char **line)
 	while (stash != NULL)
 	{
 		i = 0;
-		while (stash->content[i] != '\0')
+		while (stash->ctn[i] != '\0')
 		{
-			if (stash->content[i] == '\n')
+			if (stash->ctn[i] == '\n')
 			{
 				len++;
 				break ;
@@ -62,7 +62,7 @@ void	ft_count_n_malloc(t_gnl *stash, char **line)
 		}
 		stash = stash->next;
 	}
-	*line = malloc(len + 1 * sizeof(char));
+	*line = ft_calloc(len + 1, sizeof(char));
 }
 
 void	free_stash(t_gnl *stash)
@@ -73,7 +73,7 @@ void	free_stash(t_gnl *stash)
 	current = stash;
 	while (current != NULL)
 	{
-		free(current->content);
+		free(current->ctn);
 		next = current->next;
 		free(current);
 		current = next;
