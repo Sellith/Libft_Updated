@@ -18,16 +18,18 @@ char	**ft_arraydup(char **darray)
 	int		len;
 	char	**buffer;
 
-	if (darray == NULL)
+	if (!darray)
 		return (NULL);
 	len = ft_darraylen(darray);
 	buffer = ft_calloc(len + 1, sizeof(char *));
-	if (buffer == NULL)
+	if (!buffer)
 		return (NULL);
 	i = 0;
-	while (darray[i] != NULL)
+	while (darray[i])
 	{
 		buffer[i] = ft_strdup(darray[i]);
+		if (!buffer[i])
+			return (free(buffer), NULL);
 		i++;
 	}
 	buffer[i] = NULL;

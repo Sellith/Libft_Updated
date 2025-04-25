@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 00:20:12 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/02/19 00:22:22 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/25 03:13:55 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int	*ft_datoia(char	**darray, int args)
 	int	i;
 	int	*bufferi;
 
-	if (darray == NULL)
+	if (!darray)
 		return (NULL);
 	bufferi = ft_calloc(args, sizeof(int));
-	if (bufferi == NULL)
+	if (!bufferi)
 		return (NULL);
 	i = 0;
-	while (darray[i] != NULL)
+	while (darray[i])
 	{
 		bufferi[i] = ft_atoi(darray[i]);
 		i++;

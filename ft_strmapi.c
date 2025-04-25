@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvan-bre <lvan-bre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:45:40 by lvan-bre          #+#    #+#             */
-/*   Updated: 2024/10/31 21:28:52 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/25 03:14:53 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	buffer = ft_calloc(ft_strlen(s) + 1, sizeof(char));
-	if (buffer == NULL)
+	if (!buffer)
 		return (NULL);
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		buffer[i] = f(i, s[i]);
 		i++;
