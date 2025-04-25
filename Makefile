@@ -5,13 +5,13 @@ CFLAGS 		=	-Werror -Wextra -Wall -g
 BUILD_DIR 	=	../../build/libft
 BIN_DIR		=	../../bin/archives
 
-RED			=	\033[91m
-GRN			=	\033[92m
-YLW			=	\033[93m
-BLUE		=	\033[94m
-LPPL		=	\033[35m
-PPL			=	\033[95m
-CYAN		=	\033[96m
+RED			=	\033[1;91m
+GRN			=	\033[1;92m
+YLW			=	\033[1;93m
+BLUE		=	\033[1;94m
+LPPL		=	\033[1;35m
+PPL			=	\033[1;95m
+CYAN		=	\033[1;96m
 CRESET		=	\033[0m
 
 ERS_STR		=	\033[2K\r
@@ -48,7 +48,7 @@ stealth: all clean
 $(TARGET):	$(OBJS)
 	@mkdir -p $(BIN_DIR)
 	@ar rcs $(TARGET) $(OBJS)
-	@printf "$(ERS_STR)$(GRN)Info : Compilation de la libft réussie !\n$(CRESET)"
+	@printf "$(ERS_STR)$(GRN)\tLibft: Compilation succeded !\n$(CRESET)"
 
 $(BUILD_DIR)/%.o: %.c
 	@mkdir -p $(BUILD_DIR)
