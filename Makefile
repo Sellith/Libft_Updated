@@ -48,7 +48,7 @@ stealth: all clean
 $(TARGET):	$(OBJS)
 	@mkdir -p $(BIN_DIR)
 	@ar rcs $(TARGET) $(OBJS)
-	@printf "$(ERS_STR)$(GRN)\tLibft: Compilation succeded !\n$(CRESET)"
+	@printf "$(ERS_STR)$(GRN)\tLibft:\t\t\t\tCompilation succeded !\n$(CRESET)"
 
 $(BUILD_DIR)/%.o: %.c
 	@mkdir -p $(BUILD_DIR)
