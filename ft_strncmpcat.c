@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 19:13:24 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/17 20:45:42 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/27 00:54:57 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	ft_strncmpcat(const char *s1, const char *s2, char *joined, size_t n)
 	while ((buffer[i] || s2[i]) && i < n)
 	{
 		if (buffer[i] != s2[i])
+		{
+			free(buffer);
 			return ((const unsigned char)buffer[i] - (const unsigned char)s2[i]);
+		}
 		i++;
 	}
 	free(buffer);
