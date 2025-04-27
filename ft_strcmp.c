@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 18:30:26 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/27 18:34:51 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/27 18:37:06 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	int	i;
-	int	ret;
 
 	i = 0;
 	if (!s1 || !s2)
