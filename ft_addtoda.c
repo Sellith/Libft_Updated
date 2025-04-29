@@ -6,13 +6,13 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 23:25:15 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/25 01:43:13 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/04/29 15:55:18 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char **initdarray(char *str)
+static char	**initdarray(char *str)
 {
 	char	**buffer;
 
