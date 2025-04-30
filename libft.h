@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/30 19:13:10 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/01 00:26:25 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,6 @@ int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdjoining(char *dest, char *src1, char *src2);
 char	*ft_strdjoin(char *dest, char *src1, char *src2);
 char	*get_all_file(int fd);
+char	*ft_strn_replace(char *sent, int sizemax);
 
 #endif
