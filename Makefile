@@ -36,7 +36,7 @@ LIBC		=	ft_isalpha.c ft_isprint.c ft_strlen.c ft_bzero.c				\
 				ft_printf_puterror.c ft_printf_putdarray.c ft_addtoda.c			\
 				ft_freedarray.c ft_strncmpcat.c ft_strndup.c ft_rmchars.c		\
 				ft_str_replace.c ft_strlen_til_char.c ft_strcmp.c ft_strdjoin.c	\
-				ft_strdjoining.c
+				ft_strdjoining.c get_all_file.c
 
 
 
