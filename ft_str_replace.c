@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 02:52:25 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/02 05:22:06 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/02 05:24:35 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_str_replace(char **dest, char *src)
 	}
 	buffer = ft_strdup(src);
 	ft_str_reset(dest);
-	*dest = ft_strdup(buffer);
+	*dest = ft_strfdup(buffer);
 	return ;
 }
