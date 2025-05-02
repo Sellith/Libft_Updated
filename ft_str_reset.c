@@ -6,13 +6,13 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 02:45:24 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/01 02:46:54 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/02 04:13:28 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_reset_char(char *sent)
+void	ft_str_reset(char *sent)
 {
 	if (sent)
 		free(sent);

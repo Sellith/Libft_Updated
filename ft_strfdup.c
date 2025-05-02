@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_replace.c                                   :+:      :+:    :+:   */
+/*   ft_strfdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/20 02:52:25 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/02 04:14:39 by lvan-bre         ###   ########.fr       */
+/*   Created: 2025/05/02 04:08:37 by lvan-bre          #+#    #+#             */
+/*   Updated: 2025/05/02 04:08:41 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_str_replace(char **dest, char *sent)
+char	*ft_strfdup(char *sent)
 {
 	char	*buffer;
 
 	if (!sent)
-	{
-		if (dest)
-			free(dest);
 		return (NULL);
-	}
-	dest = ft_strdup(sent);
+	buffer = ft_strdup(sent);
+	if (sent)
+		free(sent);
 	return (buffer);
 }

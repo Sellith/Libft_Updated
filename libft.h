@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/01 02:47:25 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/02 04:13:02 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,13 +89,14 @@ char	**ft_addtoda(char **darray, char *str);
 int		ft_strncmpcat(const char *s1, const char *s2, char *joined, size_t n);
 char	*ft_strndup(char *sent, int size);
 char	*ft_rmchars(char *str, char c);
-char	*ft_str_replace(char *sent, int replaced);
+char	*ft_str_replace(char **dest, char *sent);
 int		ft_strlen_til_char(char *sent, char c);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdjoining(char *dest, char *src1, char *src2);
 char	*ft_strdjoin(char *dest, char *src1, char *src2);
 char	*get_all_file(int fd);
 char	*ft_strn_replace(char *sent, int sizemax);
-void	ft_reset_char(char *sent);
+void	ft_str_reset(char *sent);
+char	*ft_strfdup(char *sent);
 
 #endif
