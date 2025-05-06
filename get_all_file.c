@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 18:38:07 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/30 19:14:01 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/06 18:25:52 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,12 @@ char	*get_all_file(int fd)
 	line = NULL;
 	while (1)
 	{
-		if (buffer)
-			free(buffer);
 		buffer = get_next_line(fd);
 		if (!buffer)
-			return (get_next_line(-1), line);
+			return (get_next_line(-1), ft_str_reset(line), NULL);
 		line = ft_strjoining(line, buffer);
+		free(buffer);
 		if (!line)
-			return (free(buffer), NULL);
+			return (get_next_line(-1), NULL);
 	}
 }
