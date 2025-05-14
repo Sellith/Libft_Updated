@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 23:37:20 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/14 02:21:53 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/14 02:28:06 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ static void	selec(char c, va_list args)
 {
 	if (c == 's')
 		free(va_arg(args, char *));
-	if (c == 'd')
+	else if (c == 'd')
 		free(va_arg(args, char **));
-	if (c == 'S')
+	else if (c == 'S')
 		free(va_arg(args, void *));
 }
 
@@ -38,7 +38,10 @@ void	ft_freeall(char *format, ...)
 			if (format[i++] != '\0')
 				selec(format[i], args);
 			else
-				return (ft_printf_putstr("Erreur : '%' seul"));
+			{
+				ft_printf_putstr("Erreur : '%' seul");
+				return ;
+			}
 		}
 		i++;
 	}
