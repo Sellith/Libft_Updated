@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/14 02:24:26 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/14 04:18:33 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,5 +100,6 @@ void	ft_str_reset(char **sent);
 char	*ft_strfdup(char *sent);
 char	*get_n_close(int fd);
 void	ft_freeall(char *format, ...);
+void	ft_darray_reset(char ***darray);
 
 #endif
