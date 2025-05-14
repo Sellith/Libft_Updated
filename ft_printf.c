@@ -6,13 +6,13 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 22:49:56 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/03/31 16:41:55 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/14 02:24:00 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	selec(const char c, va_list args)
+static int	selec(const char c, va_list args)
 {
 	int	returned;
 
