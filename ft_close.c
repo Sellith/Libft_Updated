@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 01:44:57 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/16 01:45:45 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/16 01:51:57 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_close(int *fd)
 {
-	if (fd > 2)
-		close(fd);
-	fd = -2;
+	if (*fd > 2)
+		close(*fd);
+	*fd = -2;
 }
