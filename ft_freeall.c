@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 23:37:20 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/14 04:25:53 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/16 01:43:21 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,14 @@
 
 static void	selec(char c, va_list args)
 {
-	char	**darray;
-	char	*buffer;
-	void	*ptr;
-
-	darray = NULL;
-	buffer = NULL;
-	ptr = NULL;
 	if (c == 's')
-	{
-		buffer = va_arg(args, char *);
-		ft_str_reset(&buffer);
-	}
+		ft_str_reset(va_arg(args, char **));
 	else if (c == 'd')
-	{
-		darray = va_arg(args, char **);
-		ft_darray_reset(&darray);
-	}
+		ft_darray_reset(va_arg(args, char ***));
 	else if (c == 'S')
-	{
-		ptr = va_arg(args, void *);
-		free(ptr);
-	}
+		ft_mem_reset(va_arg(args, void **));
+	else if (c == 'c')
+		ft_close(va_arg(args, int *));
 }
 
 void	ft_freeall(char *format, ...)
