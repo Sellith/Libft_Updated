@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
+/*   By: sellith <sellith@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/16 01:48:11 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/19 17:32:35 by sellith          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,6 @@ void	ft_freeall(char *format, ...);
 void	ft_darray_reset(char ***darray);
 void	ft_mem_reset(void **mem);
 void	ft_close(int *fd);
+int		ft_strrnchrlen(char *src, char c, int len);
 
 #endif
