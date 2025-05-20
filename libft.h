@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/20 21:28:18 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/20 21:38:43 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdbool.h>
 
 # include "get_next_line.h"
 # include "ft_printf.h"
@@ -29,11 +30,11 @@ typedef struct s_list
 	void			*content;
 }					t_list;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
+bool	ft_isalpha(int c);
+bool	ft_isdigit(int c);
+bool	ft_isalnum(int c);
+bool	ft_isascii(int c);
+bool	ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);

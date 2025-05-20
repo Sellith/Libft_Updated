@@ -6,15 +6,17 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 18:10:01 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/01/31 06:12:14 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/20 21:40:04 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+bool	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+		return (true);
+	return (false);
 }
 
 // int main(void)

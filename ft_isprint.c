@@ -6,17 +6,17 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 22:18:29 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/01/31 06:14:55 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/20 21:39:03 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+bool	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
-		return (1);
-	return (0);
+		return (true);
+	return (false);
 }
 
 // int main(void)

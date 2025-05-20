@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvan-bre <lvan-bre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 22:01:13 by lvan-bre          #+#    #+#             */
-/*   Updated: 2024/10/19 01:04:08 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/20 21:39:44 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+bool	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+		return (true);
+	return (false);
 }
 
 // int main(void)

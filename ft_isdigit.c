@@ -6,17 +6,17 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 20:06:03 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/01/31 06:14:36 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/20 21:39:27 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+bool	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+		return (true);
+	return (false);
 }
 
 // int main(void)
