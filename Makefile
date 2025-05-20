@@ -27,17 +27,16 @@ LIBC		=	ft_isalpha.c ft_isprint.c ft_strlen.c ft_bzero.c ft_close.c		\
 				ft_lstadd_front_bonus.c	ft_lstsize_bonus.c ft_lstlast_bonus.c	\
 				ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c		\
 				ft_lstmap_bonus.c ft_strcpy.c ft_isnum.c ft_atol.c				\
-				ft_putdarray.c ft_putlarray.c ft_datoia.c ft_strstr.c			\
+				ft_datoia.c ft_strstr.c ft_lstadd_back_bonus.c ft_mem_reset.c	\
 				ft_darraylen.c ft_strcat.c ft_strjoining.c get_next_line.c		\
 				get_next_line_utils.c ft_printf_putchar.c ft_printf_puthexa.c	\
-				ft_printf_putnumber.c ft_printf_putpointer.c					\
+				ft_printf_putnumber.c ft_printf_putpointer.c ft_darray_reset.c	\
 				ft_printf_putstring.c ft_printf_putunsigned.c ft_printf.c		\
 				ft_printf_puterror.c ft_printf_putdarray.c ft_addtoda.c			\
 				ft_freedarray.c ft_strncmpcat.c ft_strndup.c ft_rmchars.c		\
 				ft_str_replace.c ft_strlen_til_char.c ft_strcmp.c ft_strdjoin.c	\
 				ft_strdjoining.c get_all_file.c ft_strn_replace.c 				\
 				ft_str_reset.c ft_strfdup.c get_n_close.c ft_freeall.c			\
-				ft_darray_reset.c ft_mem_reset.c ft_lstadd_back_bonus.c			\
 
 
 

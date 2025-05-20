@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 00:13:47 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/20 21:10:15 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/20 21:31:11 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <aio.h>
 
+# include "libft.h"
 
 int	ft_printf(const char *format, ...);
 

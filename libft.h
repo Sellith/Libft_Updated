@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/20 21:22:21 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/20 21:28:18 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,6 @@ long	*ft_datola(char **darray, int args);
 size_t	ft_strcpy(char *dst, const char *src);
 int		ft_isnum(char s);
 long	ft_atol(const char *nptr);
-void	ft_putdarray(char **darray);
-void	ft_putlarray(long *larray, int args);
 int		*ft_datoia(char	**darray, int args);
 char	*ft_strstr(const char *sent, const char *target);
 int		ft_darraylen(char **array);
