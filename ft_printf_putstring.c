@@ -3,37 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_putstring.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvan-bre <lvan-bre@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 02:12:05 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/01/10 03:07:27 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/20 21:07:11 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_printf_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 int	ft_printf_putstr(char *str)
 {
 	int	ret;
 
 	if (str == NULL)
-		return (write(1, "(null)", 6));
-	ret = write(1, str, ft_printf_strlen(str));
+		return (write(STDOUT_FILENO, "(null)", 6));
+	ret = write(STDOUT_FILENO, str, ft_strlen(str));
 	return (ret);
 }
 
-// int main(void)
-// {
-// 	ft_printf_putstr("nei");
-// 	return (0);
-// }
+int	ft_printf_putstr_fd(int fd, char *str)
+{
+	int	ret;
+
+	if (str == NULL)
+		return (write(fd, "(null)", 6));
+	ret = write(fd, str, ft_strlen(str));
+	return (ret);
+}
