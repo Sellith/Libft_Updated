@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/21 22:34:01 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/21 22:51:38 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_list
 	void			*content;
 }					t_list;
 
+bool			ft_isatoiable(char c);
 bool			ft_isalpha(int c);
 bool			ft_isdigit(int c);
 bool			ft_isalnum(int c);

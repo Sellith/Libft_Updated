@@ -17,7 +17,7 @@ CRESET		=	\033[0m
 ERS_STR		=	\033[2K\r
 
 LIBC		=	ft_isalpha.c ft_isprint.c ft_strlen.c ft_bzero.c ft_close.c		\
-				ft_isascii.c ft_memcpy.c ft_isalnum.c ft_isdigit.c				\
+				ft_isascii.c ft_memcpy.c ft_isalnum.c ft_isdigit.c ft_atoul.c	\
 				ft_memset.c ft_memmove.c ft_strlcpy.c ft_strlcat.c				\
 				ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c				\
 				ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c		\
@@ -37,7 +37,7 @@ LIBC		=	ft_isalpha.c ft_isprint.c ft_strlen.c ft_bzero.c ft_close.c		\
 				ft_str_replace.c ft_strlen_til_char.c ft_strcmp.c ft_strdjoin.c	\
 				ft_strdjoining.c get_all_file.c ft_strn_replace.c 				\
 				ft_str_reset.c ft_strfdup.c get_n_close.c ft_freeall.c			\
-				ft_dprintf.c ft_revstrlen_til_char.c ft_ultoa.c ft_atoul.c		\
+				ft_dprintf.c ft_revstrlen_til_char.c ft_ultoa.c ft_isatoiable.c	\
 
 
 OBJS = $(patsubst %.c, $(BUILD_DIR)/%.o, $(LIBC))
