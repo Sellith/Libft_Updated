@@ -37,7 +37,7 @@ LIBC		=	ft_isalpha.c ft_isprint.c ft_strlen.c ft_bzero.c ft_close.c		\
 				ft_str_replace.c ft_strlen_til_char.c ft_strcmp.c ft_strdjoin.c	\
 				ft_strdjoining.c get_all_file.c ft_strn_replace.c 				\
 				ft_str_reset.c ft_strfdup.c get_n_close.c ft_freeall.c			\
-				ft_dprintf.c ft_revstrlen_til_char.c
+				ft_dprintf.c ft_revstrlen_til_char.c ft_ultoa.c ft_atoul.c		\
 
 
 OBJS = $(patsubst %.c, $(BUILD_DIR)/%.o, $(LIBC))
