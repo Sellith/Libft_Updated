@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/20 21:55:15 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/21 03:50:41 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,5 +100,6 @@ void	ft_darray_reset(char ***darray);
 void	ft_mem_reset(void **mem);
 void	ft_close(int *fd);
 void	ft_dup_close(int fd_src, int fd_dest);
+int		ft_revstrlen_til_char(char *src, char c);
 
 #endif
