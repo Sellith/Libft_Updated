@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 00:10:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/21 22:51:38 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/05/22 03:26:33 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,6 @@ void			ft_dup_close(int fd_src, int fd_dest);
 int				ft_revstrlen_til_char(char *src, char c);
 unsigned long	ft_atoul(const char *nptr);
 char			*ft_ultoa(unsigned long n);
+char			*ft_strnfdup(char *src, int size);
 
 #endif
