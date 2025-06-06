@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 00:42:36 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/29 15:55:51 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:05:22 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	**ft_arraydup(char **darray)
 	if (!darray)
 		return (NULL);
 	len = ft_darraylen(darray);
-	buffer = ft_calloc(len + 1, sizeof(char *));
+	buffer = ft_calloc(len + 1 * sizeof(char *));
 	if (!buffer)
 		return (NULL);
 	i = 0;

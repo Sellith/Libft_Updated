@@ -6,20 +6,20 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 03:24:40 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/25 01:21:26 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:04:55 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t size)
 {
 	void	*ptr;
 
-	ptr = malloc(nmemb * size);
+	ptr = malloc(size);
 	if (!ptr)
 		return (ft_printf("%s", ERR_MALLOC), NULL);
-	ft_bzero(ptr, nmemb * size);
+	ft_bzero(ptr, size);
 	return (ptr);
 }
 

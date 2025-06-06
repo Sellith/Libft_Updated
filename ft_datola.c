@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 23:39:32 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/25 03:14:12 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:05:34 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ long	*ft_datola(char	**darray, int args)
 
 	if (!darray)
 		return (NULL);
-	bufferi = ft_calloc(args, sizeof(long));
+	bufferi = ft_calloc(args * sizeof(long));
 	if (!bufferi)
 		return (NULL);
 	i = 0;

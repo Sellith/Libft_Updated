@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 22:30:31 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/25 01:26:26 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:08:42 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	ft_count_n_malloc(t_gnl *stash, char **line)
 		}
 		stash = stash->next;
 	}
-	*line = ft_calloc(len + 1, sizeof(char));
+	*line = ft_calloc(len + 1);
 }
 
 void	free_stash(t_gnl *stash)

@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_datoia.c                                        :+:      :+:    :+:   */
+/*   ft_ut_strlen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/19 00:20:12 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/06/06 03:05:29 by lvan-bre         ###   ########.fr       */
+/*   Created: 2025/05/23 04:23:38 by lvan-bre          #+#    #+#             */
+/*   Updated: 2025/05/23 04:30:02 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	*ft_datoia(char	**darray, int args)
+int	main(int ac, char **av)
 {
 	int	i;
-	int	*bufferi;
 
-	if (!darray)
-		return (NULL);
-	bufferi = ft_calloc(args * sizeof(int));
-	if (!bufferi)
-		return (NULL);
-	i = 0;
-	while (darray[i])
-	{
-		bufferi[i] = ft_atoi(darray[i]);
-		i++;
-	}
-	return (bufferi);
+	if (ac == 1)
+		return (ft_printf("Please enter at least one str"), 1);
+	i = 1;
+	while (i < ac)
+		ft_printf("%d\n", ft_strlen(av[i++]));
+	return (0);
 }

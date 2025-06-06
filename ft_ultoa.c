@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 00:01:13 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/21 22:43:31 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:08:35 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_ultoa(unsigned long n)
 	int			i;
 
 	i = ft_numblen(n);
-	buffer = ft_calloc((i + 1), sizeof(char));
+	buffer = ft_calloc((i + 1));
 	if (!buffer)
 		return (NULL);
 	buffer[i--] = '\0';

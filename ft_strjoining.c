@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 19:16:17 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/25 01:52:17 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:07:22 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoining(char *s1, char const *s2)
 	}
 	if (!s1 && !s2)
 		return (NULL);
-	buffer = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+	buffer = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!buffer)
 		return (NULL);
 	ft_strlcpy(buffer, s1, ft_strlen(s1) + 1);

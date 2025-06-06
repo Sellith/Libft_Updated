@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:43:23 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/25 01:51:47 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:08:24 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	if (len <= ft_strlen(s) - start)
-		buffer = ft_calloc(len++ + 1, sizeof(char));
+		buffer = ft_calloc(len++ + 1);
 	else
 	{
-		buffer = ft_calloc(ft_strlen(s) - start + 1, sizeof(char));
+		buffer = ft_calloc(ft_strlen(s) - start + 1);
 		len = (ft_strlen(s) - start + 1);
 	}
 	if (!buffer)

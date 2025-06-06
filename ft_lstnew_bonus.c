@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 22:54:48 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/25 01:36:04 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:05:50 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*dst;
 
-	dst = ft_calloc(1, sizeof(t_list));
+	dst = ft_calloc(sizeof(t_list));
 	if (!dst)
 		return (NULL);
 	dst->content = content;

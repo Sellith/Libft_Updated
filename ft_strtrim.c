@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 00:08:29 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/04/25 01:51:59 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:08:11 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	trimmed = ft_strlen(s1);
 	while (ft_strchr(set, s1[trimmed - 1]) && trimmed > 0)
 		trimmed--;
-	buffer = ft_calloc(trimmed + 1, sizeof(char));
+	buffer = ft_calloc(trimmed + 1);
 	if (!buffer)
 		return (NULL);
 	ft_strlcpy(buffer, s1, trimmed + 1);

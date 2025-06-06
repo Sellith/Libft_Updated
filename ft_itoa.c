@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 00:01:13 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/21 22:44:16 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/06/06 03:06:39 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 
 	enby = (long int)n;
 	i = ft_numblen(enby);
-	buffer = ft_calloc((i + 1), sizeof(char));
+	buffer = ft_calloc((i + 1));
 	if (!buffer)
 		return (NULL);
 	buffer[i--] = '\0';
