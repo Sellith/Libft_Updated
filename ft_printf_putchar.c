@@ -6,7 +6,7 @@
 /*   By: lvan-bre <lvan-bre@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 22:49:07 by lvan-bre          #+#    #+#             */
-/*   Updated: 2025/05/20 21:24:20 by lvan-bre         ###   ########.fr       */
+/*   Updated: 2025/09/05 03:43:58 by lvan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,13 @@ int	ft_printf_putchar(char c)
 int	ft_printf_putchar_fd( int fd, char c)
 {
 	return (write(fd, &c, 1));
+}
+
+char	*ft_ctoa(char c)
+{
+	char	str[2];
+
+	str[0] = c;
+	str[1] = '\0';
+	return (ft_strdup(str));
 }
